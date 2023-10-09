@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_batch31b/app/routes/app_route.dart';
 
 class DashboardView extends StatelessWidget {
   const DashboardView({super.key});
@@ -14,7 +15,10 @@ class DashboardView extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    // Named route
+                    Navigator.pushNamed(context, AppRoute.arithmeticRoute);
+                  },
                   child: const Text('Arithmetic'),
                 ),
               )

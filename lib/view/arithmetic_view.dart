@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_batch31b/app/routes/app_route.dart';
 
 class AtithmeticView extends StatefulWidget {
   const AtithmeticView({super.key});
@@ -17,6 +18,12 @@ class _AtithmeticViewState extends State<AtithmeticView> {
     int second = int.parse(secondController.text);
 
     int result = first + second;
+
+    Navigator.pushNamed(
+      context,
+      AppRoute.outputRoute,
+      arguments: result,
+    );
   }
 
   @override
